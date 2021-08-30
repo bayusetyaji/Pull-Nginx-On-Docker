@@ -1,0 +1,22 @@
+1. Buka Docker hub cari NGIX 
+2. Pull image dari docker hub 
+
+    #sudo docker pull nginx
+
+--> perintah ini akan otomasi menggunakan nginx dengan versi yang terbaru
+
+3. Cek image 
+
+    #sudo docker image ls 
+
+4. build image 
+
+    #sudo docker create -p 8090:80 --name iniwebserver nginx:latest
+
+--> nama dan port dapat disesuaikan 
+
+5. Kemudian jalankan container yang dibuild 
+
+    #sudo docker container start iniwebserver
+
+6. Untuk cek apakah sudah berhasil, coba akses di bowser localhost:8090 atau ip:port
